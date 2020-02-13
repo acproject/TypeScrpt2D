@@ -1,0 +1,28 @@
+{
+    "name": "TypeScrpt2D",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "lite-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acproject/TypeScrpt2D.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/acproject/TypeScrpt2D/issues"
+    },
+    "homepage": "https://github.com/acproject/TypeScrpt2D#readme",
+    "devDependencies": {
+        "lite-server": "^2.5.4"
+    },
+    "dependencies": {
+        "systemjs": "^6.2.2",
+        "typescript": "^3.7.5"
+    }
+}
