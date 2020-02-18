@@ -209,3 +209,27 @@ export class Application implements EventListenerObject {
     this.isSupportMouseMove = false;
   }
 }
+
+/**
+ * 增加计数器和对应的回调函数
+ * # Application类可以触发多个计时器
+ * # 每个计时器可以以不同帧率来重复执行任务
+ * # 每个计时器可以倒计时的方式执行一次任务
+ * # 尽量让内存使用与运行效率达到相对平衡
+ */
+
+export type TimerCallback = (id: number, data: any) => void;
+
+class Timer {
+  public id:number = -1;
+  public enabled:boolean = false;
+
+  public callback: TimerCallback;
+  public callbackData: any = undefined;
+  public counddown: number = 0;
+  public timeout: number = 0;
+  public onlyOnce: boolean = false;
+  constructor(callback: TimerCallback){
+    this.callback = callback;
+  }
+}
