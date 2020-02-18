@@ -1,4 +1,5 @@
 import {CanvasInputEvent, EInputEventType, EMouseKeyType} from './CanvasInputEvent';
+import {vec2} from '../../Math/Vec2';
 
 export class CanvasMouseEvent extends CanvasInputEvent {
     public mouseButton:EMouseKeyType;
@@ -11,11 +12,5 @@ export class CanvasMouseEvent extends CanvasInputEvent {
         this.localPosition = vec2.create();
     }
 
-    private _toCanvasMouseEvent(evt: Event):CanvasMouseEvent {
-        let event = evt as MouseEvent;
-        let mousePosition: vec2 = this._viewportToCanvasCoordinate(event);
-        let canvasMouseEvent: CanvasMouseEvent = new CanvasMouseEvent(mousePosition
-            , event.button ,event.altKey, event.ctrlKey, event.shiftKey);
-        return canvasMouseEvent;
-    }
+    
 }

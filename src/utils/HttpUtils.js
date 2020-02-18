@@ -32,3 +32,11 @@ var HttpRequest = /** @class */ (function () {
     return HttpRequest;
 }());
 export { HttpRequest };
+// export type RequestBC = ((response:HttpResponse) => void);
+// HttpRequest.doGetAsync('levec.proc', RequestBC => {
+//     if(RequestBC.success === true) {
+//         str: string = RequestBC.response as string;
+//         tokenizer.setSource(str);
+//         while()
+//     }
+// });
